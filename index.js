@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Substituição de function por arrow function
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.render("index");
 });
 
 app.get("/index", (req, res) => {
