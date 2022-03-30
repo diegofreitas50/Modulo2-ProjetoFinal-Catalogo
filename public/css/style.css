@@ -15,8 +15,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: sticky;
     width: 100%;
+    min-width: 532px;
     
   }
   nav ul {
@@ -49,10 +50,18 @@ header {
     min-width: 500px;
   }
 
+  main{
+      min-width: 534px;
+      text-align: center;
+      padding-top: 3em;
+  }
+
   .cards {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    flex-wrap: wrap;
   }
   .card {
     text-align: center;
