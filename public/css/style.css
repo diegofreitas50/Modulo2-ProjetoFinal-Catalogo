@@ -59,8 +59,7 @@ header {
   .cards {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
     flex-wrap: wrap;
   }
   .card {
@@ -142,6 +141,54 @@ section#cadastro form button{
 }
 
 section#cadastro form button:hover{
+  transform: translateY(-5px);
+  background-color: rgb(65, 65, 65);
+  color: #fff;
+}
+
+.contatos{
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  flex-wrap: wrap;
+}
+
+.contato{
+  text-align: center;
+  color: rgb(224, 123, 8);
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+  padding: 30px;
+  margin: 20px;
+  width: 150px;
+  transition: all 0.3s ease-out;
+  border-left: 3px solid rgb(224, 123, 8);
+}
+
+.contato:hover{
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.contatos .contato a{
+  padding: 0.6rem;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin: 1em auto;
+  background-color: rgb(224, 123, 8);
+  border: solid 1px rgb(112, 64, 10);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;    
+  border-radius: 20px;
+  box-shadow: 2px 3px 3px black;
+  text-decoration: none;
+  
+}
+
+.contatos .contato a:hover{
+  transform: translateY(-5px);
   background-color: rgb(65, 65, 65);
   color: #fff;
 }
