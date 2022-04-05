@@ -5,17 +5,32 @@ const path = require("path");
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
+const receitas = [
+    {
+        id: 1,
+        nome: "Cuscuz",
+        ingredientes:"Fuba",
+        preparo: "cuscuzeira",
+        imagem: "./image/cuscuz-de-milho-1614715966465_v2_450x450.jpg"
+    }
+];
+
+let receita = undefined;
+
 // Substituição de function por arrow function
 app.get("/", (req, res) => {
-  res.render("index");
-});
-
-app.get("/index", (req, res) => {
-    res.render("index"); // Nome do arquivo, o EJS já busca dentro da pasta views.
+  res.render("index", {receitas, receita});
 });
 
 app.get("/cadastro", (req, res) =>{
     res.render("cadastro")
+});
+
+app.post("/add", (req, res) =>{
+    const receita = req.body;
+    receita.id = receitas.length +1;
+    receitas.push(receita);
+    res.redirect("/");
 });
 
 app.get("/contatos", (req, res) =>{

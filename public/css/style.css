@@ -1,123 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&family=Hubballi&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&family=Hubballi&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Fredoka, Arial;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: Fredoka, Arial;
+}
 
-  html,body {   
-    scroll-behavior: smooth;
-    height: 100vh;
-    width: 100%;
-  }
-  nav {
-    background-color: rgb(224, 123, 8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    width: 100%;
-    min-width: 532px;
-    
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav ul li {
-    padding: 1rem;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: rgb(247, 245, 246);
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: 0.5s;
-  }
-  
-  nav ul li a:hover {
-    color: rgb(0, 0, 0);
-  }
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
+}
+nav {
+  background-color: rgb(224, 123, 8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  width: 100%;
+  min-width: 532px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  padding: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(247, 245, 246);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+nav ul li a:hover {
+  color: rgb(0, 0, 0);
+}
 
 header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-image: linear-gradient( 109.9deg,  rgba(251,189,100,1) 1.8%, rgba(255,207,139,1) 95.4% );
-    padding: 1rem 1rem 1rem 1rem;
-    min-width: 500px;
-  }
-
-  main{
-      min-width: 534px;
-      text-align: center;
-      padding-top: 3em;
-  }
-
-  .cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    flex-wrap: wrap;
-  }
-  .card {
-    text-align: center;
-    color: rgb(224, 123, 8);
-    border-radius: 5px;
-    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-    padding: 30px;
-    margin: 20px;
-    width: 150px;
-    transition: all 0.3s ease-out;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    cursor: pointer;
-  }
-   
-  .card p {
-    color: #fdfdff;
-    font-size: 16px;
-  }
-   
-  .image {
-    float: center;
-    max-width: 150px;
-    max-height: 150px;
-  }
-  .blue {
-    border-left: 3px solid rgb(224, 123, 8);
-  }  
-
-  section#cadastro{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 3em;
-    justify-content: center;
-    
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(
+    109.9deg,
+    rgba(251, 189, 100, 1) 1.8%,
+    rgba(255, 207, 139, 1) 95.4%
+  );
+  padding: 1rem 1rem 1rem 1rem;
+  min-width: 500px;
 }
 
-section#cadastro h2{
-    width: 100%;
-    text-align: center;
-    padding-bottom: 2em;
+main {
+  min-width: 534px;
+  text-align: center;
+  padding-top: 3em;
 }
 
-section#cadastro form{
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  text-align: center;
+  color: rgb(224, 123, 8);
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+  padding: 30px;
+  margin: 20px;
+  width: 150px;
+  transition: all 0.3s ease-out;
+}
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.card p {
+  color: #fdfdff;
+  font-size: 16px;
+}
+
+.image {
+  float: center;
+  max-width: 150px;
+  max-height: 150px;
+}
+.blue {
+  border-left: 3px solid rgb(224, 123, 8);
+}
+
+section#cadastro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 3em 3em 3em;
+  justify-content: center;
+}
+
+section#cadastro h2 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+section#cadastro form {
   width: 100%;
 }
 
-section#cadastro form input{
+section#cadastro form input {
   min-width: 350px;
   width: 100%;
-  padding: 0.5rem;
+  padding: .5rem;
   font-size: 1rem;
   outline: none;
   border: solid 1px rgb(224, 123, 8);
-  margin: 0rem 0.6rem 0.6rem 0rem;
+  margin: .3rem 0.6rem 0.6rem 0rem;
   border-radius: 20px;
   background-color: rgb(211, 208, 208);
   flex-direction: row;
@@ -125,35 +128,43 @@ section#cadastro form input{
   box-shadow: 2px 3px 3px black;
 }
 
-section#cadastro form button{
-  padding: 0.6rem;
+#form label{
+  justify-content: center;
+  display: block; 
+  padding-top: 1em;
+  align-items: center;
+}
+
+section#cadastro form button {
+  padding: 0.7em;
   width: auto;
   display: flex;
   justify-content: center;
   margin: 2px auto;
+  margin-top: 2rem;
   background-color: rgb(224, 123, 8);
   border: solid 1px rgb(112, 64, 10);
   color: #fff;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;    
+  transition: all 0.3s ease-in-out;
   border-radius: 20px;
   box-shadow: 2px 3px 3px black;
 }
 
-section#cadastro form button:hover{
+section#cadastro form button:hover {
   transform: translateY(-5px);
   background-color: rgb(65, 65, 65);
   color: #fff;
 }
 
-.contatos{
+.contatos {
   display: flex;
   justify-content: center;
-  align-items: center;    
+  align-items: center;
   flex-wrap: wrap;
 }
 
-.contato{
+.contato {
   text-align: center;
   color: rgb(224, 123, 8);
   border-radius: 5px;
@@ -165,12 +176,12 @@ section#cadastro form button:hover{
   border-left: 3px solid rgb(224, 123, 8);
 }
 
-.contato:hover{
+.contato:hover {
   transform: translateY(-5px);
   cursor: pointer;
 }
 
-.contatos .contato a{
+.contatos .contato a {
   padding: 0.6rem;
   width: auto;
   display: flex;
@@ -180,14 +191,13 @@ section#cadastro form button:hover{
   border: solid 1px rgb(112, 64, 10);
   color: #fff;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;    
+  transition: all 0.3s ease-in-out;
   border-radius: 20px;
   box-shadow: 2px 3px 3px black;
   text-decoration: none;
-  
 }
 
-.contatos .contato a:hover{
+.contatos .contato a:hover {
   transform: translateY(-5px);
   background-color: rgb(65, 65, 65);
   color: #fff;
