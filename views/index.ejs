@@ -22,14 +22,26 @@
     </nav>
 
     <main>
+        <% if(mensagem != "") {%>
+        <section id="message">
+           <p><%= mensagem %></p> 
+           <span id="close" ></span>
+
+        </section>
+        <% } %>
+
+
         <h1>Receitas</h1>
+        
         <div class="cards">
+            <% receitas.forEach((receita) => { %>
             <div class="card blue">
-                <% receitas.forEach((receita) => { %>
+                
                     <h2><%= receita.nome %></h2>
                     <img src="<%= receita.imagem %>" alt="" class="image">    
-                <% }); %>
+               
             </div>
+            <% }); %>
             
 
 
@@ -48,6 +60,6 @@
 
     </footer>
 
-    <script src="../public/js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
