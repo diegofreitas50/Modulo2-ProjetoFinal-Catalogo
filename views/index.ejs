@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Receitas Nordestinas</title>
 </head>
 <body>
 
     <header>
-        <img src="./image/logo.png" alt="logo">
+        <img src="/image/logo.png" alt="logo">
     </header>
     <nav>
         <ul>
@@ -21,14 +21,6 @@
         </ul>
     </nav>
 
-    <main>
-        <% if(mensagem != "") {%>
-        <section id="message">
-           <p><%= mensagem %></p> 
-           <span id="close" ></span>
-
-        </section>
-        <% } %>
 
 
         <h1>Receitas</h1>
@@ -39,27 +31,72 @@
                 
                     <h2><%= receita.nome %></h2>
                     <img src="<%= receita.imagem %>" alt="" class="image">    
-               
+                    <a id="btn" href="/getById/<%= receita.id %>/put">Editar</a>
+                    <a id="btn" href="/getById/<%= receita.id %>/delete">Apagar</a>
             </div>
             <% }); %>
             
 
 
-            <!-- <div class="card blue">
-                <h2>Receita de Cuscuz</h2>
-                <p>exemplo</p>
-                <img class="image" src="./image/cuscuz-de-milho-1614715966465_v2_450x450.jpg" alt="">
-            </div> -->
             
         </div>
     </main>
-
-
+  
 
     <footer>
 
     </footer>
 
-    <script src="/js/script.js"></script>
+    
 </body>
+<% if (receitaEd != null) {%>
+    <section class="modal-overlay" id="overlay">
+      
+       <div class="modal" id ='modal'>
+                
+           <form class ='form-modal' action = '/update/<% receitaEd.id %>' method="">
+              <div class ='modal-header'>
+                 
+                  <h3>Modificar receita</h3>
+                  
+              </div>
+               <div class="modal-body">
+                   <label for="nome">Nome do prato:</label>
+                   <input type="text" id="nome" name="nome" value ="<%= receitaEd.nome %>" required>
+       
+                   <label for="ingredientes">Ingredientes:</label>
+                   <input type="text" id="ingredientes" name="ingredientes" value ="<%= receitaEd.ingredientes %>"required>
+                   
+                   <label for="preparo">Modo de preparo:</label>
+                   <input type="text" id="preparo" name="preparo"value ="<%= receitaEd.preparo %>" required>
+                                                           
+                   <label for="imagem">Link da imagem:</label>
+                   <input type="text" id="imagem" name="imagem"value ="<%= receitaEd.imagem %>" required>
+                   
+                   <button id="btnCadastrar" type="submit">CONFIRMAR</button>
+                   <a id ='btn' href="/">Voltar</a>
+               </div>
+           </form>
+       </div> 
+ 
+    </section>
+  <% } %>
+  <% if (receitaDelete != null) {%>
+    <section class="modal-overlay" id="overlay">
+     <div class="modal" id ='modal'>  
+      <div class ='modal-header'>
+       <h3>Apagar Receita</h3>
+      </div>
+      <div class="modal-body">
+         <p>Quer mesmo excluir essa receita?</p> 
+      </div>
+      <div class='modal-btm'>
+        <a id = 'btn' href="/remove/<% receitaDelete.id %>">SIM</a>
+        <a id ='btn' href="/">NÃO</a>
+
+      </div>
+     <% } %>
+   </div> 
+    </section>
+    <script src="/js/script.js"></script>
 </html>

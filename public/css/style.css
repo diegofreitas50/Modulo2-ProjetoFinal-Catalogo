@@ -10,6 +10,8 @@ body {
   scroll-behavior: smooth;
   height: 100vh;
   width: 100%;
+  text-align: center;
+ 
 }
 nav {
   background-color: rgb(224, 123, 8);
@@ -42,6 +44,7 @@ nav ul li a:hover {
 }
 
 header {
+  text-align: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -135,7 +138,7 @@ section#cadastro form input {
   align-items: center;
 }
 
-section#cadastro form button {
+/* section#cadastro form*/ button, #btn { 
   padding: 0.7em;
   width: auto;
   display: flex;
@@ -149,9 +152,16 @@ section#cadastro form button {
   transition: all 0.3s ease-in-out;
   border-radius: 20px;
   box-shadow: 2px 3px 3px black;
+  text-decoration: none;
+
+}#btn:hover{ 
+  transform: translateY(-5px);
+  background-color: rgb(65, 65, 65);
+  color: #fff;
 }
 
-section#cadastro form button:hover {
+
+/* section#cadastro form*/ button:hover{ 
   transform: translateY(-5px);
   background-color: rgb(65, 65, 65);
   color: #fff;
@@ -225,4 +235,64 @@ span#close {
   font-size: 2rem;
   cursor: pointer;
   transition: .3s;
+}
+
+.modal-overlay{
+ background-color: #00000070;
+ width: 100vw;
+ height: 100vh;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 9999;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ overflow-y: auto;
+}
+.modal{
+ margin: 1rem;
+ width: 100%;
+ max-width: 600px;
+ height: auto;
+ min-height: 300px;
+ background-color: rgba(255, 207, 139, 1);
+ border-radius: 11px;
+ display: flex;
+ flex-direction: column;
+ overflow: hidden;
+ justify-content: space-between;
+
+}
+
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  background-color:rgb(224, 123, 8);
+  padding: 1rem;
+
+}
+.modal-header a{
+  font-size: 1.4rem;
+  color: white;
+}
+.modal-body{
+  padding: .5rem 1rem;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.form-modal{
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-modal input{
+  width: 100%;
+  padding: .5rem;
+  font-size: .8rem;
+  outline: none;
+}
+.form-modal label{
+  padding-top: .5rem;
 }
