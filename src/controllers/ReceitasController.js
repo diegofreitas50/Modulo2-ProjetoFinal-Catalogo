@@ -74,14 +74,14 @@ const update = async (req, res) => {
     res.status(500).send({ err: err.message });
   }
 };
-const remove = async(req,res) => {
+const remove = async (req, res) => {
   try {
-    await Receita.destroy({where: {id: req.params.id}})
-    res.render("contatos");
+    await Receita.destroy({ where: { id: req.params.id } });
+    res.redirect("/");
   } catch (err) {
     res.status(500).send({ err: err.message });
   }
-}
+};
 
 module.exports = {
   getAll,

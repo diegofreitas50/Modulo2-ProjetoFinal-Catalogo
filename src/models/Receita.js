@@ -34,5 +34,8 @@ const Receita = connect.define(
     updateAt:false,
   }
 );
-
+const initTable = async () => {
+  await Receita.async();
+}
+initTable();
 module.exports = Receita;

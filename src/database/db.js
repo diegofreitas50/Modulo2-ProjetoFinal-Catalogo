@@ -11,4 +11,4 @@ const connect = new Sequelize(
   }
 );
 
-module.exports = connect; 
+module.exports = connect;
